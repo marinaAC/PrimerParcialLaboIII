@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modelo de parcial</title>
+        <script src="./js/generic.js"></script>
+        <script src="./js/firstLoad.js"></script>
+        <script src="./js/personFuncion.js"></script>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="container">
+        <div class="container-spin" id="load" hidden>
+            <div class="sping"><img src="./images/spiiner2.gif" alt=""></div>
+        </div> 
+       
+        <div class="container-gral">
+            <div class="container-box" hidden id="containerPopup">
+                <div class="close-Btn" id="closePopUp">x</div>
+                <input hidden type="text" name="id" id="idName"/>
+
+                <div class="input-box">
+                    <label for="usrName">Nombre Materia</label><br>
+                    <input type="text" class="inputSinError inputError" name="name" id="name" placeholder="Nombre de la materia"/>
+                </div>
+                <div class="input-box">
+                    <label for="usrLastName">Cuatrimestre</label> <br>
+                   <!-- <input type="text" class="inputSinError inputError" name="cuatrimestre" id="cuatri" placeholder="cuatrimestre"/>-->
+                    <select class="inputSinError inputError" name="cuatrimestre" id="cuatri">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>	
+                </div>
+                <div class="input-box">
+                    <label for="usrNac">Fecha de final</label> <br>
+                    <input type="date" class="inputSinError inputError" name="fechaFin" id="fechaFin"/>	
+                </div>
+                <div class="input-box">
+                    <label for="usrSex">Turno</label> <br>
+                    <input type="radio" class="inputSinError inputError" name="turno" id="mna" value="mañana">Mañana
+                    <input type="radio" class="inputSinError inputError" name="turno" id="ncha" value="noche">Noche	
+                </div>
+                <div class="button-box">
+                    <input type="button" class="modificarBtn" id="btnSave" value="Modificar"/>
+                    <input type="button" id="btnDelete" value="Eliminar"/>
+                </div>
+
+            </div>
+            <div class="container-list" id="list">
+                <div class="table-container">
+                    <h2>Horario de materias</h2>
+                    <table id="tabla">
+                      <thead>
+                            <tr>
+                                <th>Materia</th>
+                                <th>Cuatrimestre</th>
+                                <th>Fecha Final</th>
+                                <th>Turno</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tCuerpo">
+                    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
